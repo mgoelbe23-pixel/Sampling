@@ -1,14 +1,14 @@
 # Sampling
 https://colab.research.google.com/drive/1XulJf8GN-Uo-EqqomIwouEtkpO8jFyMm?usp=sharing
 
-Discussion
-1️⃣ Problem Overview
+
+1️ Problem Overview
 
 The credit card dataset used in this project is highly imbalanced, where the number of non-fraud transactions significantly outweighs fraud transactions. In such cases, machine learning models tend to become biased toward the majority class, leading to misleadingly high accuracy but poor fraud detection performance.
 
 To address this issue, multiple sampling strategies were applied to balance the dataset before training classification models.
 
-2️⃣ Sampling Techniques Compared
+2️ Sampling Techniques Compared
 
 Five different resampling techniques were implemented:
 
@@ -24,7 +24,7 @@ SMOTEENN – Combination of oversampling and cleaning using Edited Nearest Neigh
 
 Each technique creates a balanced training dataset while keeping the test dataset untouched.
 
-3️⃣ Machine Learning Models Used
+3️ Machine Learning Models Used
 
 The following five classification models were trained on each resampled dataset:
 
@@ -40,7 +40,7 @@ K-Nearest Neighbors (KNN)
 
 This resulted in 25 total model combinations (5 sampling methods × 5 models).
 
-4️⃣ Key Observations
+4️ Key Observations
 
 Oversampling techniques such as SMOTE and ADASYN generally performed better than simple random oversampling.
 
@@ -52,13 +52,13 @@ Linear models like Logistic Regression benefited significantly from balanced dat
 
 Accuracy alone was not sufficient to evaluate performance; recall and F1-score were more meaningful for fraud detection.
 
-5️⃣ Best Performing Combination
+5️ Best Performing Combination
 
 The best-performing combination was determined based on ROC-AUC score (or Accuracy if used in your initial code).
 
 In most runs, synthetic sampling techniques such as SMOTE combined with Random Forest or SVM provided the most stable and reliable results.
 
-6️⃣ Why Sampling is Important in Fraud Detection
+6️ Why Sampling is Important in Fraud Detection
 
 In fraud detection:
 
@@ -76,7 +76,7 @@ Improve recall
 
 Provide fairer classification boundaries
 
-7️⃣ Limitations
+7️ Limitations
 
 Sampling may introduce synthetic noise (especially with aggressive oversampling).
 
@@ -86,7 +86,7 @@ Performance may vary depending on random seed.
 
 Real-world fraud detection systems require additional techniques like cost-sensitive learning.
 
-8️⃣ Conclusion
+8️ Conclusion
 
 This study demonstrates that handling class imbalance significantly improves classification performance in fraud detection problems.
 
